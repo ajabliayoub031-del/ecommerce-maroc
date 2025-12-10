@@ -1,0 +1,64 @@
+/* style.css - design simple, responsive, support RTL */
+:root{
+  --bg:#0f1724;
+  --card:#0b1220;
+  --text:#eef2f7;
+  --muted:#97a0aa;
+  --accent:#f59e0b;
+  --container:1100px;
+  font-family: Inter, system-ui, Arial, sans-serif;
+}
+
+*{box-sizing:border-box}
+body{
+  margin:0;
+  background:linear-gradient(180deg,#071026 0%, #071826 100%);
+  color:var(--text);
+  -webkit-font-smoothing:antialiased;
+  -moz-osx-font-smoothing:grayscale;
+  line-height:1.4;
+}
+.container{max-width:var(--container);margin:0 auto;padding:20px;}
+.header-inner{display:flex;align-items:center;justify-content:space-between;gap:10px;}
+.logo{font-weight:700;font-size:20px}
+.logo .accent{color:var(--accent);margin-left:6px}
+
+.site-header{background:rgba(0,0,0,0.25);backdrop-filter:blur(6px);position:sticky;top:0;z-index:50}
+.main-nav a{color:var(--text);text-decoration:none;margin:0 10px;font-weight:600}
+.actions{display:flex;gap:8px;align-items:center}
+.lang-btn{background:transparent;color:var(--text);border:1px solid rgba(255,255,255,0.08);padding:8px 10px;border-radius:8px;cursor:pointer}
+
+/* Hero */
+.hero{padding:40px 0;text-align:center}
+.hero h1{font-size:28px;margin:0 0 10px}
+.hero p{color:var(--muted);margin-bottom:20px}
+.btn{background:var(--accent);color:#111;padding:10px 16px;border-radius:10px;text-decoration:none;font-weight:700;display:inline-block}
+.btn:hover{opacity:0.95}
+
+/* Products */
+.products{padding:30px 20px}
+.product-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:18px;margin-top:18px}
+.card{background:rgba(255,255,255,0.03);border-radius:12px;padding:14px;display:flex;flex-direction:column;gap:10px;min-height:220px}
+.card img{width:100%;height:140px;object-fit:cover;border-radius:8px}
+.card h3{margin:0;font-size:16px}
+.card p{color:var(--muted);margin:0;font-size:14px}
+.price{font-weight:800;margin-top:auto}
+.card .actions{display:flex;gap:8px;align-items:center}
+
+/* About & Contact */
+.about, .contact{padding:24px 20px}
+.contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:18px;align-items:start}
+.contact-form input, .contact-form textarea{width:100%;padding:10px;border-radius:8px;border:1px solid rgba(255,255,255,0.06);background:transparent;color:var(--text);margin-bottom:10px}
+.contact-form label{display:block;margin-bottom:6px;color:var(--muted)}
+.site-footer{padding:18px;text-align:center;color:var(--muted);border-top:1px solid rgba(255,255,255,0.03)}
+
+/* Responsive */
+@media (max-width:800px){
+  .contact-grid{grid-template-columns:1fr}
+  .hero h1{font-size:22px}
+}
+
+/* RTL support when .lang-ar applied */
+body.lang-ar{direction:rtl;text-align:right}
+body.lang-ar .main-nav a{margin:0 10px}
+body.lang-ar .logo .accent{margin-right:6px;margin-left:0}
