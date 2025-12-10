@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Boutique Locale - Maroc</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body class="lang-fr">
+  <header class="site-header">
+    <div class="container header-inner">
+      <div class="logo">Boutique<span class="accent">Maroc</span></div>
+      <nav class="main-nav">
+        <a href="#" data-i18n="nav_home">Accueil</a>
+        <a href="#products" data-i18n="nav_products">Produits</a>
+        <a href="#about" data-i18n="nav_about">À propos</a>
+        <a href="#contact" data-i18n="nav_contact">Contact</a>
+      </nav>
+      <div class="actions">
+        <button id="langToggle" class="lang-btn">AR</button>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="container">
+        <h1 data-i18n="hero_title">Produits locaux de qualité — Livraison partout au Maroc</h1>
+        <p data-i18n="hero_sub">Commandez facilement via WhatsApp</p>
+        <a id="heroOrder" class="btn" href="#" target="_blank" rel="noopener" data-i18n="hero_btn">Commander sur WhatsApp</a>
+      </div>
+    </section>
+
+    <section id="products" class="products container">
+      <h2 data-i18n="prod_title">Nos produits</h2>
+      <div id="productList" class="product-grid">
+        <!-- Les produits seront générés par script.js -->
+      </div>
+    </section>
+
+    <section id="about" class="about container">
+      <h2 data-i18n="about_title">À propos</h2>
+      <p data-i18n="about_text">
+        Nous sommes une boutique locale au Maroc proposant des articles de ménage et accessoires de qualité.
+      </p>
+    </section>
+
+    <section id="contact" class="contact container">
+      <h2 data-i18n="contact_title">Contact</h2>
+      <div class="contact-grid">
+        <div>
+          <p><strong data-i18n="contact_phone_label">Téléphone:</strong> <a id="phoneText" href="tel:+2126XXXXXXXX">+212 6XXXXXXXX</a></p>
+          <p><strong data-i18n="contact_whatsapp_label">WhatsApp:</strong> <a id="waText" href="#" target="_blank">WhatsApp</a></p>
+          <p><strong data-i18n="contact_address_label">Adresse:</strong> Casablanca, Maroc</p>
+        </div>
+        <form id="contactForm" class="contact-form">
+          <label for="name" data-i18n="form_name">Nom</label>
+          <input id="name" name="name" required />
+          <label for="email" data-i18n="form_email">Email</label>
+          <input id="email" name="email" type="email" required />
+          <label for="message" data-i18n="form_message">Message</label>
+          <textarea id="message" name="message" rows="4" required></textarea>
+          <button type="submit" class="btn" data-i18n="form_send">Envoyer</button>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>© <span id="year"></span> BoutiqueMaroc — <span data-i18n="footer_rights">Tous droits réservés</span></p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
